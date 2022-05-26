@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimal-ui,user-scalable=no">
+		<title>一笔画</title>
+		<script type="text/javascript" src="./js/html.js"></script>
+<script type="text/javascript">
+	isShouJi();
+</script>
+		<script type="text/javascript">
+			var _config = {}; _config['isSite'] = 'http://game.2sky.cn/';_config["isSites"] = "http://xcwyy.lfjytop.com/";
+			var _con = {}; _con["num"] = 104;
+		</script>
+		<script>document.domain = '4399.com';</script>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<style type="text/css">
+		*{
+            margin:0;
+            padding:0;
+        }
+        #js-fps {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1000;
+            margin:0 auto;
+            color:#FFF;
+            font-size:20px;
+        }
+        body{
+            background: #000;
+            overflow: hidden;
+        }
+        #bg,canvas{
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+			margin-top:30px;
+        }
+        .hide{
+            display: none;
+        }
+        #share{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+          display: none;
+          z-index: 110;
+        }
+	#share-wx{
+		background:rgba(0,0,0,0.8);
+		position:absolute;top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		z-index:10000;
+		display:none;
+	}
+	#wx-qr{
+		background:rgba(0,0,0,0.8);
+		position:absolute;top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		z-index:10000;
+		display:none;
+	}
+.lis{overflow: hidden;width: 100%;z-index: 1041049;position: absolute;top:0px;}
+.lis a{display: block;width:104.9%;color:#ffffff;font-size:14px;text-decoration: none;background:#606783;text-align: center;opacity: 0.5;line-height:30px;font-weight: bold;font-family:"微软雅黑"}
+.lis a img{position: relative;top: 1px;}
+</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="./js/code.js"></script>
+		
+		<script src="./js/104/hilo-standalone.js"></script>
+		<script src="./js/104/yibihua.min.js"></script>
+		<script language=javascript>
+		var mebtnopenurl = 'http://game.2sky.cn/game/';
+		dataForWeixin = {
+			"appId": "",
+			"imgUrl": "http://game.2sky.cn/vapp/104/3.jpg",
+			"url": "http://game.2sky.cn/game/104/",
+			"tTitle": "一笔画-6e游戏",
+		    "tContent": "一笔画是通过点击图中的各个点，连成两个之间的线，达到画线效果。将图中所有的线连接起来，游戏通关-6e游戏"
+		};	
+				
+		function goHome(){
+			//window.location=mebtnopenurl;
+			try{parent.moregame();}catch(e){}
+		}
+		function clickMore(){
+			// goHome();
+			try{parent.moregame();}catch(e){}
+		}
+		function dp_share(){
+			location.href = "http://www.6m5m.com";
+		}
+		function dp_Ranking(){
+			//window.location=mebtnopenurl;
+			try{parent.moregame();}catch(e){}
+		}
+
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+				WeixinJSBridge.invoke('sendAppMessage', {
+				   "appid": dataForWeixin.appId,
+					"img_url": dataForWeixin.imgUrl,
+					"link": dataForWeixin.url,
+					"desc": dataForWeixin.tContent,
+					"title": dataForWeixin.tTitle
+				});
+				setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+			});
+
+			WeixinJSBridge.on('menu:share:timeline', function(argv) {
+				WeixinJSBridge.invoke('shareTimeline', {
+				   "appid": dataForWeixin.appId,
+					"img_url": dataForWeixin.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": dataForWeixin.url,
+					"desc": dataForWeixin.tContent,
+					"title": dataForWeixin.tTitle
+				});
+				setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+			});
+		}, false);
+		</script>
+		<div id=share style="display: none">
+			<img width=100% src="./vapp/104/shares.png" style="position: fixed; z-index: 104104; top: 0; left: 0; display: " ontouchstart="document.getElementById('share').style.display='none';" />
+		</div>
+			<script type="text/javascript">
+            var myData = {};
+			function dp_submitScore(score,iswin,stitle){
+				if(iswin==0){
+//					myData.score = parseInt(score);
+//					myData.scoreName ="成功闯了"+score+"关";
+//					document.title =stitle;			
+//					dataForWeixin.tTitle = document.title;
+//                     var str = score;
+//try{parent.__4399finishgame(str);}catch(e){}
+				}
+			}
+			</script>
+		
+			<div>
+							</div>
+		<div style="display:none;">
+			<script type="text/javascript">
+
+</script>		</div>
+	</body>
+</html>

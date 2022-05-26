@@ -1,0 +1,4 @@
+﻿
+function isShouJi() {
+	return true;
+}
