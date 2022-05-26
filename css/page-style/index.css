@@ -12,7 +12,7 @@ html,body {
 header {
 	width: 100%;
 	height: 265px;
-	background-image: url(https://pcsdata.baidu.com/thumbnail/e70251189n1f071d857b4e0ac66012a4?fid=1103225250322-16051585-534083933543888&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-J%2FmqWpuX2zJ3JkKZC5dUeup3v5k%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=9142324851936794700&dp-callid=0&time=1653548400&bus_no=26&size=c1600_u1600&quality=100&vuk=-&ft=video);
+	background-image: url(../../img/背景.png);
 	background-size:100% 100%;
 	background-attachment: fixed;
 }
@@ -90,10 +90,17 @@ nav {
 	background-color:#000000;
  	background-color:rgba(0,0,0,0.3)
 }
+.li-1 {
+	display: inline-block;
+ 	background-color:rgba(255,255,0,0.5)
+}
+.li-1>a>b {
+	color: #FFFFFF;
+}
 /*搜索框*/
 #search {
 	width: 49%;
-	height: 56px;
+	height: 54px;
 	float: right;
 	border: 1px solid aqua;
 	line-height: 56px;
