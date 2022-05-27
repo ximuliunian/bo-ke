@@ -15,6 +15,7 @@ header {
 	background-image: url(../../img/背景.png);
 	background-size:100% 100%;
 	background-attachment: fixed;
+	margin-bottom: 10px;
 }
 /*设置头部左侧*/
 #head-left {
@@ -70,7 +71,7 @@ nav {
 	text-align: center;
 	width: 50%;
 	height: 106px;
-	float: left;
+	float: right;
 }
 /*a标签设置*/
 .a {
@@ -101,9 +102,60 @@ nav {
 #search {
 	width: 49%;
 	height: 54px;
-	float: right;
+	float: left;
 	border: 1px solid aqua;
 	line-height: 56px;
 	text-align: center;
 	font-size: 40px;
+}
+/*内容*/
+article {
+	/*background-color: #00FFFF;*/
+	margin: 0 auto;
+	width: 80%;
+	height: auto;
+}
+/*设置内容样式*/
+article>li>div {
+	display: inline-block;
+}
+.body-li {
+	width: auto;
+	height: 150px;
+	list-style: none;
+	margin: 20px;
+ 	background-color:rgba(255,255,0,0.3)
+} 
+
+.body-li>.li-box-1>a>img {
+	width: auto;
+	height: 150px;	
+	position: relative;
+}
+.li-box-1,.li-box-2 {
+	float: left;
+}
+.li-box-1 {
+	margin-right: 50px;
+}
+.p-1 {
+	width: auto;
+	height: 50px;
+	font-size: 40px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.p-2 {
+	width: auto;
+	height: 50px;
+	font-size: 20px;
+	margin-left: 50px;
+}
+#li-bottom {
+	width: auto;
+	height: 25px;
+	text-align: center;
+}
+#li-bottom>span {
+	margin: auto 15px;
 }
