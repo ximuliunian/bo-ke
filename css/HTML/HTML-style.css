@@ -1,0 +1,59 @@
+/*清除所有的标签的内外边距*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*设置页面最小边距*/
+body {
+	width: 80%;
+	margin: 0 auto;
+	min-width: 1200px;
+}
+
+/*设置头部*/
+header {
+	width: auto;
+	height: 200px;
+	background-color: rgba(0, 255, 255, 0.5);
+}
+
+header>img {
+	widows: auto;
+	height: 200px;
+	float: right;
+}
+
+header>p {
+	font-size: 50px;
+	text-align: center;
+	line-height: 145px;
+}
+
+#message {
+	background-color: rgba(211, 211, 211, 0.5);
+}
+
+#message>span {
+	margin: auto 120px;
+}
+
+#message>span>img {
+	height: 50px;
+}
+
+.b-1 {
+	font-size: 25px;
+	position: absolute;
+	line-height: 50px;
+}
+
+/* 设置代码显示 */
+xmp {
+	margin: 0 auto;
+	width: 1200px;
+	height: auto;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 20px;
+}
