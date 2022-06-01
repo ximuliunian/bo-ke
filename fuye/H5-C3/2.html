@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/HTML/HTML-style.css">
+    <style>
+        /* 设置内容里面p样式 */
+        .header-p {
+            /* 把字体设置为40像素 */
+            font-size: 40px;
+            /* 让字体加粗 */
+            font-weight: bold;
+            /* 距离顶部30像素距离 */
+            margin-top: 30px;
+            /* 距离左侧20像素 */
+            margin-left: 20px;
+        }
+
+        /* 设置内容里面h1样式 */
+        .bodyer-h1 {
+            /* 让文字输出所占地方位父元素的百分之八十 */
+            width: 90%;
+            /* 让输出位置水平居中 */
+            margin: 0 auto;
+            /* 让文字首行缩进两个文字的距离 */
+            text-indent: 2em;
+            /* 把字体设置为30像素 */
+            font-size: 30px;
+        }
+
+        /* 设置dl标签样式 */
+        dl {
+            /* 宽度设置值为百分之一百 */
+            width: 100%;
+            /* 高度设置为自适应 */
+            height: auto;
+            /* 设置背景色并透明0.3 */
+            background-color: rgba(215, 199, 209, 0.3);
+        }
+
+        #tiao-zhuan {
+            /* 设置宽为130 */
+            width: 130px;
+            /* 设置宽为150 */
+            height: 200px;
+            /* 设置背景色并透明0.3 */
+            background-color: rgba(215, 199, 209, 0.3);
+            /* 设置字体为15像素 */
+            font-size: 20px;
+            /* 让他绝对(固定)定位到距离右侧百分之一;距离底部百分之五十 */
+            position: fixed;
+            right: 1%;
+            bottom: 50%;
+        }
+
+        #tiao-zhuan p {
+            /* 让该id下的每个p标签都往下6像素 */
+            margin-top: 6px;
+            /* 让文字居中 */
+            text-align: center;
+        }
+
+        #tiao-zhuan a {
+            /* 去除a标签的下划线 */
+            text-decoration: none;
+        }
+    </style>
+    <title>元素关系</title>
+</head>
+
+<body>
+    <header>
+        <p>元素关系</p>
+    </header>
+    <article>
+        <dl id="1">
+            <dt>
+                <p class="header-p">行内元素</p><br>
+            </dt>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <p>
+                        1、和其他元素都在一行上；
+                    </p>
+                    <br>
+                    <p>
+                        2、高度、行高和顶以及底边距都不可改变；
+                    </p>
+                    <br>
+                    <p>
+                        3、宽度就是它的文字或图片的宽度，不可改变。
+                    </p>
+                    <br>
+                    <p>
+                        总的来说，行内元素一般都是基于语义级(semantic)的基本元素，它只能容纳文本或者其他行内元素，通常被包括在块元素中使用，常见内联元素有“a、b、br”等。
+                        那么行内元素该如何使用呢？
+                    </p>
+                    <br>
+
+                    <p>
+                        1、行内元素会在一条直线上排列，在同一行从左至右水平排列。直到一行排不下，才会换行。
+                    </p>
+                    <br>
+                    <p>
+                        2、行内元素设置宽、高、margin上下、padding上下无效（竖直无效）。
+                    </p>
+                    <br>
+                    <p>
+                        3、行内元素设置line-height，margin左右、padding左右有效（水平有效）。
+                    </p>
+                    <br>
+                    <p>
+                        4、行内元素的宽高随标签里的内容而变化。
+                    </p>
+                </h1>
+            </dd>
+        </dl>
+        <dl id="2">
+            <dt>
+                <p class="header-p">块元素</p>
+            </dt>
+            <br>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <p>
+                        块级元素（block element）在浏览器中占据整行，并排斥其它元素与其位于同一行。也就是说，块级元素的宽度是 100%。
+                    </p>
+                    <br>
+                    <p>
+                        块级元素的宽度是 100%，在浏览器中默认独占一行。
+                    </p>
+                    <br>
+                    <p>
+                        行内元素在浏览器中默认与其它行内元素共占一行。只有当多个行内元素的总宽度大于浏览器的宽度时，才会换行显示。
+                    </p>
+                    <br>
+                    <p>
+                        块级元素内部可以嵌套块级元素或行内元素。
+                    </p>
+                    <br>
+                </h1>
+            </dd>
+        </dl>
+        <dl id="3">
+            <dt>
+                <p class="header-p">行内块元素</p>
+            </dt>
+            <br>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <p>
+                        行内块级元素，它既具有块级元素的特点，也有行内元素的特点，它可以自由设置元素宽度和高度，也可以在一行中放置多个行内块级元素。
+                    </p>
+                    <br>
+                    <p>
+                        和其他行内或行内块级元素元素放置在同一行上；
+                    </p>
+                    <br>
+                    <p>
+                        元素的高度、宽度、行高以及顶和底边距都可设置。
+                    </p>
+                    <br>
+                </h1>
+            </dd>
+        </dl>
+        <dl id="4">
+            <dt>
+                <p class="header-p">替换元素</p>
+            </dt>
+            <br>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <p>
+                        替换元素就是浏览器根据元素的标签和属性，来决定元素的具体显示内容。
+                        替换元素是其内容不受CSS视觉格式化模型控制的元素，例如img标签，嵌入的文档（iframe之类）或者applet，这些叫做替换元素。
+                        比如img元素通过src属性的值来读取图片信息并显示出来，而如果查看(x)html代码，却看不到图片的实际内容，而且img元素的内容通常会被src属性指定的图像替换掉；例如input元素的type属性决定是显示输入框，还是单选按钮等。
+
+                    </p>
+                </h1>
+            </dd>
+        </dl>
+        <dl id="5">
+            <dt>
+                <p class="header-p">转换元素</p>
+            </dt>
+            <br>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <p>
+                        display：block ，定义元素为块级元素
+                    </p>
+                    <br>
+                    <p>
+                        display : inline ，定义元素为行内元素
+                    </p>
+                    <br>
+                    <p>
+                        display：inline-block，定义元素为行内块级元素。
+                    </p>
+                </h1>
+            </dd>
+        </dl>
+        <dl id="6">
+            <dt>
+                <p class="header-p">元素嵌套</p>
+            </dt>
+            <br>
+            <dd>
+                <h1 class="bodyer-h1">
+                    <li>块元素可以嵌套块元素</li>
+                    <li>块元素可以嵌套行内元素</li>
+                    <li>行内元素可以嵌套行内元素</li>
+                    <li>行内元素可以嵌套块元素</li>
+                </h1>
+            </dd>
+        </dl>
+    </article>
+    <div id="fan-hui">
+        <a href="#">
+            <img src="https://s1.328888.xyz/2022/06/01/5vmwM.gif" alt="返回顶部" title="返回顶部">
+        </a>
+    </div>
+    <div id="tiao-zhuan">
+        <p><a href="#1">行内元素</a></p>
+        <p><a href="#2">块元素</a></p>
+        <p><a href="#3">行内块元素</a></p>
+        <p><a href="#4">替换元素</a></p>
+        <p><a href="#5">转换元素</a></p>
+        <p><a href="#6">元素嵌套</a></p>
+    </div>
+</body>
+
+</html>

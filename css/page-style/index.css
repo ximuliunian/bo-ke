@@ -141,6 +141,7 @@ article>li>div {
 }
 
 .body-li {
+	text-align: center;
 	width: auto;
 	height: 150px;
 	list-style: none;
@@ -160,19 +161,6 @@ article>li>div {
 	position: relative;
 }
 
-.li-box-1 {
-	float: left;
-	margin-right: auto;
-}
-
-.li-box-2 {
-	text-align: center;
-}
-
-.li-box-3 {
-	float: right;
-}
-
 .p-1 {
 	width: auto;
 	height: 50px;
@@ -185,15 +173,11 @@ article>li>div {
 	width: auto;
 	height: 50px;
 	font-size: 20px;
-	margin-left: 50px;
+	/* margin-left: 50px; */
 }
 
 #li-bottom {
 	width: auto;
 	height: 25px;
 	text-align: center;
-}
-
-#li-bottom>span {
-	margin: auto 20px;
 }

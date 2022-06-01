@@ -4,48 +4,46 @@
 	padding: 0;
 }
 
+html,
+body {
+	height: 100%;
+}
+
 /*设置页面最小边距*/
 body {
 	width: 80%;
 	margin: 0 auto;
-	min-width: 1200px;
+	min-width: 1000px;
 }
 
 /*设置头部*/
 header {
 	width: auto;
-	height: 200px;
+	height: 60px;
 	background-color: rgba(0, 255, 255, 0.5);
-}
-
-header>img {
-	widows: auto;
-	height: 200px;
-	float: right;
 }
 
 header>p {
 	font-size: 50px;
 	text-align: center;
-	line-height: 145px;
+	line-height: 60px;
 }
 
-#message {
-	background-color: rgba(211, 211, 211, 0.5);
-}
-
-#message>span {
-	margin: auto 120px;
-}
-
-#message>span>img {
+/* 设置快速返回顶部样式 */
+#fan-hui {
+	/* 设置宽高为50像素 */
+	width: 50px;
 	height: 50px;
+	/* 让他绝对(固定)定位到距离右侧百分之三;距离底部百分之二十 */
+	position: fixed;
+	right: 3%;
+	bottom: 20%;
 }
 
-.b-1 {
-	font-size: 25px;
-	position: absolute;
-	line-height: 50px;
+/* 设置返回顶部图标大小 */
+#fan-hui img {
+	width: 100%;
+	height: 100%;
 }
 
 /* 设置代码显示 */
