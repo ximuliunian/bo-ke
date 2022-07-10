@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge游览器扩展问题</title>
+    <!-- 页面图标 -->
+    <link rel="icon" href="../../ku/img/logo.png">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="../../CSS/zhang-jie-style.css">
+    <style>
+        header {
+            background-image: url(https://s1.ax1x.com/2022/07/10/jykkMq.png);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>Edge游览器扩展报错</span>
+    </header>
+    <div id="body">
+        <div class="body">
+            <p id="shi-jian">本文最后更新于：2022-7-10 晚上</p>
+
+            <h2>前言</h2>
+
+            <p>某一天我心血来潮想下载某个扩展但是一直在转圈圈,这还不算,转完之后给我报错(Download interrupted)</p>
+
+            <p>难受ing~</p>
+
+            <p>当时还以为是网络的问题...说多了都是泪,接下来说解决方法</p>
+
+            <h2>方法一</h2>
+
+            <p> 打开C盘的这个(<b>C:\Windows\System32\drivers\etc</b>)地址</p>
+
+            <p>找到其中的<b>hosts</b>文件,并以 文本编辑程序(记事本) 打开</p>
+
+            <p>在<b>hosts</b>文件中写入</p>
+
+            <p>
+                <b>
+                    131.253.33.219 edge.microsoft.com
+                    <br>
+                    131.253.33.219 msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com
+                </b>
+                <br>
+                <br>
+                如下图所示
+            </p>
+
+            <a href="https://s1.ax1x.com/2022/07/10/jymdfS.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/10/jymdfS.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>然后保存,就不会再有Download interrupted报错了</p>
+
+            <h2>方法二</h2>
+
+            <p>既方法一之后如果限制管理员身份，保存不了的话，可以通过以下方法来保存</p>
+
+            <p>先打开<b>hosts</b>文件,然后复制(Ctrl+c)该文件,到桌面(随便什么地方)粘贴文件</p>
+
+            <p>打开文件并复制粘贴方法一需要写入的文本,然后保存</p>
+
+            <p>再打开<b>hosts</b>文件的路径并把已经写完文本(桌面中)的<b>hosts</b>文件拖动到改路径,直接点击<b>替换目标中的文件</b>如下图</p>
+
+            <a href="https://s1.ax1x.com/2022/07/10/jyKOhV.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/10/jyKOhV.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>然后就完成了,就可以去扩展商城里下载图片了</p>
+
+            <div class="bottom">
+                <p>没有更多的内容了~</p>
+                <a href="https://www.ximuliunian.cf/fu-ye/lian-xi" id="lian-xi">联系我</a>
+                <a href="#">回到顶部</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

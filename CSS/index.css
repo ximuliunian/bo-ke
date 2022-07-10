@@ -115,6 +115,12 @@ a {
     text-decoration: none;
 }
 
+/* 滑动条  */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 /* 设置头部 开始 */
 
 /* 外壳 */
