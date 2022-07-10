@@ -110,26 +110,22 @@ header>span {
 
 /* 底部 */
 .bottom {
-    background-color: #252D38;
+
     width: 80%;
-    position: relative;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+    padding-top: 20px;
     margin: auto;
     font-size: 2vw;
     color: rgb(0, 255, 94);
-    border-radius: 15px;
 }
 
 .bottom>p {
-    padding: 10px;
+    padding-bottom: 30px;
     float: left;
 }
 
 .bottom>a {
+    padding-bottom: 30px;
     float: right;
-    padding: 10px;
     text-decoration: none;
     color: aqua;
 }
