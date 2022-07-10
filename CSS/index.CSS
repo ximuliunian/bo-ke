@@ -79,7 +79,6 @@
 
     .zhang-jie>a>img {
         width: 100%;
-        height: 200px;
         display: block;
         margin: auto;
         border-top-left-radius: 15px;
@@ -88,6 +87,10 @@
 
     .zhang-jie>span {
         width: 100%;
+    }
+
+    .zhang-jie>span a {
+        font-size: 2.5vw;
     }
 
     .xia-xian,
@@ -116,9 +119,8 @@ a {
 
 /* 外壳 */
 header {
-    /* 设置宽高 */
+    /* 设置宽 */
     width: 100%;
-    height: 25%;
     /* 设置下边框 */
     border-bottom: 2px solid #000;
     /* 黑色半透明背景颜色 */
@@ -135,8 +137,9 @@ header {
 #biao-ti>span {
     display: inline-block;
     padding-top: 20px;
+    padding-bottom: 20px;
     color: rgb(255, 255, 255);
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 /* 设置图像 */
@@ -231,7 +234,6 @@ nav a:hover {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-
 }
 
 /* 底部 */
