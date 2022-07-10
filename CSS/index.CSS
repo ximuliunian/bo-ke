@@ -1,0 +1,285 @@
+/* 取消所有标签的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 响应式 开始 */
+@media screen and (min-width: 960px) {
+
+    /* 背景图片 */
+    body {
+        background: url(https://s1.328888.xyz/2022/06/09/CXIwO.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%100%;
+        background-attachment: fixed;
+        min-width: 960px;
+    }
+
+    /* 设置图片 */
+    .zhang-jie>a>img {
+        width: 40%;
+        display: block;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    /* 文字主体 */
+    .zhang-jie>span {
+        width: 60%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 960px) and (min-width: 750px) {
+
+    /* 背景图片 */
+    body {
+        background: url(https://s1.328888.xyz/2022/06/11/Cm0re.png);
+        background-repeat: no-repeat;
+        background-size: 100%100%;
+        background-attachment: fixed;
+        min-width: 750px;
+    }
+
+    /* 设置图片 */
+    .zhang-jie>a>img {
+        width: 40%;
+        display: block;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    /* 文字主体 */
+    .zhang-jie>span {
+        width: 60%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    /* 背景图片 */
+    body {
+        background: url(https://s1.328888.xyz/2022/06/19/0kDkT.png);
+        background-repeat: no-repeat;
+        background-size: 100%100%;
+        background-attachment: fixed;
+        min-width: 250px;
+    }
+
+    .zhang-jie>a {
+        margin: auto;
+        display: block;
+    }
+
+    .zhang-jie>a>img {
+        width: 100%;
+        height: 200px;
+        display: block;
+        margin: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .zhang-jie>span {
+        width: 100%;
+    }
+
+    .xia-xian,
+    .body-text-bottom {
+        display: none;
+    }
+
+
+}
+
+/* 响应式 结束 */
+
+
+/* 让 height 可以用 */
+html,
+body {
+    height: 100%;
+}
+
+/* 清除 a 标签的下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 设置头部 开始 */
+
+/* 外壳 */
+header {
+    /* 设置宽高 */
+    width: 100%;
+    height: 25%;
+    /* 设置下边框 */
+    border-bottom: 2px solid #000;
+    /* 黑色半透明背景颜色 */
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* 内壳 */
+#biao-ti {
+    text-align: center;
+}
+
+#biao-ti>span {
+    display: inline-block;
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+/* 设置图像 */
+#biao-ti>span>img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#biao-ti>span>a>img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* 设置导航 开始 */
+nav {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: rgb(255, 255, 255);
+}
+
+nav>ul {
+    text-align: left;
+    font-size: 1.7em;
+    padding-left: 15px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    padding-left: 15px;
+    color: rgb(242, 255, 0);
+    text-decoration: underline;
+}
+
+
+
+nav a:hover {
+    color: rgb(96, 245, 160);
+    font-weight: bold;
+}
+
+/* 设置导航 结束 */
+
+
+/* 设置头部 结束 */
+
+
+/* 内容 开始 */
+
+/* 设置主体 */
+.zhang-jie {
+    background-color: rgba(0, 0, 0, 0.523);
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+/* 设置文字主体 */
+.zhang-jie>span {
+    height: 100%;
+    color: rgb(121, 244, 115);
+}
+
+.zhang-jie>span>hr {
+    width: 95%;
+    margin: auto;
+}
+
+.body-text-top,
+.body-text-center,
+.body-text-bottom {
+    padding-left: 20px;
+}
+
+/* 设置文字标题 */
+.body-text-top {
+    height: 20%;
+    font-size: 2.5vw;
+}
+
+.body-text-center {
+    height: 60%;
+    font-size: 1.5vw;
+    /* 超出边三点 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+
+/* 底部 */
+.body-text-bottom {
+    width: 90%;
+    height: 20%;
+    margin: auto;
+}
+
+/* 底部左部分 */
+.body-text-bottom-left {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+/* 底部右部分 */
+.body-text-bottom-right {
+    float: right;
+    width: 50%;
+    position: relative;
+}
+
+/* 设置图标 */
+.body-text-bottom-left>img,
+.body-text-bottom-right>img {
+    width: 15.7%;
+    display: inline-block;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+/* 设置底部文字 */
+.body-text-bottom-left>p,
+.body-text-bottom-right>p {
+    text-align: center;
+    font-size: 2vw;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.zhang-jie a {
+    color: white;
+}
+
+.zhang-jie a:hover {
+    color: aqua;
+}
+
+
+/* 内容 结束 */

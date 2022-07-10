@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素关系</title>
+    <!-- 页面图标 -->
+    <link rel="icon" href="../../ku/img/logo.png">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="../../CSS/zhang-jie-style.css">
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="../../gao-liang/styles/felipec.min.css">
+    <script src="../../gao-liang/highlight.min.js"></script>
+    <style>
+        header {
+            background-image: url(https://s1.ax1x.com/2022/07/10/jsU6qf.png);
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <header>
+        <span>元素关系</span>
+    </header>
+
+    <div id="body">
+        <div class="body">
+
+            <p id="shi-jian">本文最后更新于：2022-7-10 中午 </p>
+
+
+
+            <h2>行内元素</h2>
+            <p> 1、和其他元素都在一行上；</p>
+
+            <p> 2、高度、行高和顶以及底边距都不可改变；</p>
+
+            <p> 3、宽度就是它的文字或图片的宽度，不可改变。</p>
+
+            <p>总的来说，行内元素一般都是基于语义级(semantic)的基本元素，它只能容纳文本或者其他行内元素，通常被包括在块元素中使用，常见内联元素有“a、b、br”等。</p>
+
+            <p> 1、行内元素会在一条直线上排列，在同一行从左至右水平排列。直到一行排不下，才会换行。</p>
+
+            <p>2、行内元素设置宽、高、margin上下、padding上下无效（竖直无效）。</p>
+
+            <p>3、行内元素设置line-height，margin左右、padding左右有效（水平有效）。</p>
+
+            <p>4、行内元素的宽高随标签里的内容而变化。</p>
+
+
+
+            <h2>块元素</h2>
+
+            <p> 块级元素（block element）在浏览器中占据整行，并排斥其它元素与其位于同一行。也就是说，块级元素的宽度是 100%。</p>
+
+            <p> 块级元素的宽度是 100%，在浏览器中默认独占一行。</p>
+
+            <p> 行内元素在浏览器中默认与其它行内元素共占一行。只有当多个行内元素的总宽度大于浏览器的宽度时，才会换行显示。</p>
+
+            <p> 块级元素内部可以嵌套块级元素或行内元素。</p>
+
+
+
+            <h2>行内块元素</h2>
+
+            <p> 行内块级元素，它既具有块级元素的特点，也有行内元素的特点，它可以自由设置元素宽度和高度，也可以在一行中放置多个行内块级元素。</p>
+
+            <p> 和其他行内或行内块级元素元素放置在同一行上；</p>
+
+            <p>元素的高度、宽度、行高以及顶和底边距都可设置。</p>
+
+
+
+            <h2>替换元素</h2>
+
+            <p>
+                替换元素就是浏览器根据元素的标签和属性，来决定元素的具体显示内容。
+                替换元素是其内容不受CSS视觉格式化模型控制的元素，例如img标签，嵌入的文档（iframe之类）或者applet，这些叫做替换元素。
+                比如img元素通过src属性的值来读取图片信息并显示出来，而如果查看(x)html代码，却看不到图片的实际内容，而且img元素的内容通常会被src属性指定的图像替换掉；例如input元素的type属性决定是显示输入框，还是单选按钮等。
+            </p>
+
+
+
+            <h2>转换元素（用CSS转换）</h2>
+
+            <p> display：block ，定义元素为块级元素</p>
+
+            <p> display : inline ，定义元素为行内元素</p>
+
+            <p> display：inline-block，定义元素为行内块级元素。</p>
+        </div>
+    </div>
+    <!-- <div class="bottom">
+        <p>到底了~</p>
+        <a href="#">回到顶部</a>
+    </div> -->
+</body>
+
+</html>

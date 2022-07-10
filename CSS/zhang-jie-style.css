@@ -1,0 +1,141 @@
+* {
+    /* 清除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置高度 */
+html,
+body {
+    height: 100%;
+}
+
+/* 去除滑动条并且不会失去滑动功能 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #181c27;
+}
+
+/* 设置头部 开始 */
+header {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: local;
+    height: 70vh;
+    width: 100%;
+    text-align: center;
+}
+
+header>span {
+    color: aqua;
+    line-height: 70vh;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 设置头部 结束 */
+
+
+/* 内容 开始 */
+
+/* 让内容居中 并给里面内容做相对定位  */
+#body {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+/* 书写内容 */
+.body {
+    background-color: #252D38;
+    width: 100%;
+    color: aqua;
+    border-radius: 15px;
+    position: absolute;
+    top: -15vh;
+}
+
+/* 设置内容 */
+.body>p {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* 设置标题 */
+.body>h2 {
+    border-bottom: 1px solid #5f5f5f;
+    color: darkorange;
+    width: 80%;
+    margin: auto;
+}
+
+/* 设置图片 */
+.body img {
+    width: 60%;
+    display: block;
+    margin: auto;
+    padding: 5%;
+}
+
+/* 设置显示代码 */
+.body code {
+    display: block;
+    width: 80%;
+    margin: 5% auto;
+    font-size: 1.1vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 15px;
+}
+
+/* 时间 */
+#shi-jian {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-left: 10px solid yellow;
+    font-size: 1.5rem;
+    background-color: #696c71;
+}
+
+/* 底部 */
+.bottom {
+    background-color: #252D38;
+    width: 80%;
+    position: relative;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 2vw;
+    color: rgb(0, 255, 94);
+    border-radius: 15px;
+}
+
+.bottom>p {
+    padding: 10px;
+    float: left;
+}
+
+.bottom>a {
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    color: aqua;
+}
+
+a:hover {
+    color: yellow;
+}
+
+/* 内容 结束 */
