@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码高亮-行号</title>
+    <!-- 页面图标 -->
+    <link rel="icon" href="../../ku/img/logo.png">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="../../CSS/zhang-jie-style.css">
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="../../gao-liang--hang-hao/felipec.min.css">
+    <script src="../../gao-liang--hang-hao/highlight.min.js"></script>
+    <!-- 行号显示 -->
+    <script src="../../gao-liang--hang-hao/highlightjs-line-numbers.js"></script>
+    <!-- 初始化 -->
+    <script>hljs.initHighlightingOnLoad(); hljs.initLineNumbersOnLoad();</script>
+    <style>
+        header {
+            background-image: url(https://s1.ax1x.com/2022/07/11/jy6aqJ.png);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>代码高亮-行号</span>
+    </header>
+    <div id="body">
+        <div class="body">
+            <p id="shi-jian">本文最后更新于：2022.7.11 中午</p>
+
+            <h2>前言</h2>
+
+            <p> 在网页的使用过程中，经常会有代码展示的必要。而不同颜色的关键词，可以让代码看起来更直观、更美观,本文教如何进行代码高亮并显示行号</p>
+
+            <h2>代码进行高亮</h2>
+
+            <p><b>highlight.js</b>是一款基于JavaScript的语法高亮库，目前支持125种编程语言，有63种可供选择的样式，而且能够做到语言自动识别
+                ，和目前主流的JS框架都能兼容，比较实用，而且用起来炒鸡简单！效果如下行所示</p>
+
+            <pre>
+                <code>&lt;p&gt; 这是一行高亮代码&lt;/p&gt; </code>
+            </pre>
+
+            <p>现在来进行操作</p>
+
+            <h3>步骤一：获取highlight</h3>
+
+            <p>有两种方法(只用其中一种即可)，不管哪个方法都得去官网,任意一种都管用,网址: <a href="https://highlightjs.org/"
+                    target="_blank">https://highlightjs.org/</a>
+            </p>
+
+            <p>方法一：去官网下载文件</p>
+
+            <a href="https://s1.ax1x.com/2022/07/11/jy5pKx.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/11/jy5pKx.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>点击<b>获取版本(Get version)</b>按钮进入语言选择，往下滑，勾选常用的语言，在使用插件时会自动检测你要展示的代码的语言，
+                并自动让代码高亮。通常common就足够用了。</p>
+
+            <a href="https://s1.ax1x.com/2022/07/11/jy5aLV.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/11/jy5aLV.png" alt="找不到图片了" title="查案图片">
+            </a>
+
+            <p>选好文件之后,往下滑,点击 <b>Download</b>进行下载</p>
+
+
+            <a href="https://s1.ax1x.com/2022/07/11/jyIKp9.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/11/jyIKp9.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>
+                styles目录下是所有的css样式，决定代码的颜色,有很多样式,可以参考官方文档: <a href="https://highlightjs.org/static/demo/"
+                    target="_blank">https://highlightjs.org/static/demo</a> 我用的是felipec.min.css<br>
+                highlight.min.js为库文件，决定代码哪些部分会变高亮
+            </p>
+
+            <p>然后引入文件</p>
+
+            <pre><code>&lt;!-- css文件可以更改,按照自己喜好更改即可 --&gt;
+&lt;link rel="stylesheet" href="../../gao-liang/styles/felipec.min.css"&gt;
+&lt;script src="../../gao-liang/highlight.min.js"&gt;&lt;/script&gt;
+            </code></pre>
+
+            <br><br>
+            <p>方法二: 找官网cdn</p>
+
+            <p>还是点<b>获取版本(Get version)</b>按钮进入，然后第一个就是</p>
+
+
+            <a href="https://s1.ax1x.com/2022/07/11/j6pXgx.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/11/j6pXgx.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>把第一个<b>cdnjs</b>里面的内容给链接上</p>
+
+            <pre><code>&lt;!-- css文件可以更改,按照自己喜好更改即可 --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/felipec.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"&gt;&lt;/script&gt;
+            </code></pre>
+
+            <h3>步骤二: 加载highlight.js库</h3>
+            <br>
+            <pre>
+<code>&lt;script&gt;
+    hljs.initHighlightingOnLoad();//初始化
+&lt;/script&gt;                   
+            </code></pre>
+
+            <h3>步骤三: 在&lt;pre&gt;和&lt;code&gt;标签中添加要显示的代码</h3>
+
+            <pre>
+    <code>&lt;pre&gt;&lt;code class="HTML"&gt;
+
+     &lt!DOCTYPE html&gt
+     &lthtml lang="zh-CN"&gt
+     &lthead&gt
+         &ltmeta charset="UTF-8"&gt
+         &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+         &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+         &lttitle&gt高亮显示&lt/title&gt
+     &lt/head&gt
+     &ltbody&gt
+         &ltp&gt现在所显示的代码是高亮哦&lt/p&gt
+     &lt/body&gt
+     &lt/html&gt
+
+&lt;/code&gt;&lt;/pre&gt;
+            </code>
+            </pre>
+
+            <p>系统会自动检测你的代码的语言，如果不放心的话，可以在&lt;code&gt;标签中用class属性指定语言类别，上面代码中指定为HTML语言</p>
+
+            <h2>高亮结束--注意!!!</h2>
+
+            <p>代码里包含标签，记得将标签里的"<b>&lt;</b>"换成"<b>& l t ;</b>"，把"<b>&gt;</b>"换成"<b>& g t
+                    ;</b>"(&开头的是书写问题,中间没有空格),否则会被游览器解析为正常标签,导致显示代码</p>
+
+            <p>选择方法二的时候从官方那里复制的cdn的"<b>//</b>"前面要加上"<b>https:</b>",有时候不加这个高亮会失灵</p>
+
+            <p>代码有两个语言,只亮了其中一种语言,另一种不亮,这个可以先class决定要亮哪种语言,另一种不亮的可以用注释来使其亮起;如
+            </p>
+
+            <p>这是不加注释的</p>
+
+            <pre>
+<code>&lt;script&gt;
+    hljs.initHighlightingOnLoad();
+&lt;/script&gt;                   
+            </code></pre>
+
+            <p>这是加了注释的</p>
+
+            <pre>
+<code>&lt;script&gt;
+    hljs.initHighlightingOnLoad();//
+&lt;/script&gt;                   
+             </code></pre>
+
+            <p>可以很明显的看出来没加注释的JS不亮;所以加了注释就OK了,如果有多种语言也可以以此一试</p>
+
+            <br><br><br>
+
+            <h2>行号(光亮怎么行,还得有行号)</h2>
+
+            <p>行号是如下所示</p>
+
+            <pre>
+                <code>
+
+                    
+                </code>
+            </pre>
+
+            <h3>首先下载文件</h3>
+
+            <p>下载添加行号js文件<a href="https://github.com/wcoder/highlightjs-line-numbers.js/"
+                    target="_blank">https://github.com/wcoder/highlightjs-line-numbers.js/</a></p>
+
+            <h3>然后引入文件</h3>
+
+            <pre>
+                <code>&lt;script src="../../gao-liang--hang-hao/highlightjs-line-numbers.js"&gt;&lt;/script&gt;
+&lt;!-- 具体路径看你把文件放在了哪里 --&gt;</code>
+            </pre>
+
+            <h3>再加入代码</h3>
+
+            <pre>
+                <code>&lt;script&gt;
+    hljs.initLineNumbersOnLoad();//这个不是上面高亮的代码
+&lt;/script&gt;
+</code>
+            </pre>
+
+            <h3>在添加行号的样式</h3>
+
+            <pre>
+                <code>&lt;style&gt;
+  .hljs-ln-numbers {
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #999;
+&lt;/style&gt;
+                </code>
+            </pre>
+
+            <p>完事,ok了,按照高亮部分的格式正常书写就行了</p>
+
+            <h2>结尾</h2>
+
+            <p>一共只需要三个文件加四行代码</p>
+
+            <pre>
+<code>&lt;!-- 代码高亮 --&gt;
+&lt;link rel="stylesheet" href="../../gao-liang--hang-hao/felipec.min.css"&gt;
+&lt;script src="../../gao-liang--hang-hao/highlight.min.js"&gt;&lt;/script&gt;
+&lt;!-- 行号显示 --&gt;
+&lt;script src="../../gao-liang--hang-hao/highlightjs-line-numbers.js"&gt;&lt;/script&gt;
+&lt;!-- 初始化 --&gt;
+&lt;script&gt;
+    hljs.initHighlightingOnLoad(); //
+    hljs.initLineNumbersOnLoad();
+&lt;/script&gt;
+</code>
+            </pre>
+
+            <p>这里是打包好的单独的文件,高亮(HTML,CSS,JS)1.11.5.1,行号(不知道);
+                <br><br>文件:<a href="../../ku/zip/高亮-行号.zip" download="高亮-行号">点击下载</a>
+            </p>
+
+
+            <div class="bottom">
+                <p>没有更多的内容了~</p>
+                <a href="https://www.ximuliunian.cf/fu-ye/lian-xi" id="lian-xi">联系我</a>
+                <a href="#">回到顶部</a>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

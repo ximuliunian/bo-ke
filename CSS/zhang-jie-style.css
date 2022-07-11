@@ -78,12 +78,24 @@ header>span {
     margin: auto;
 }
 
+/* 设置步骤 */
+.body h3 {
+    border-bottom: 1px solid #5f5f5f;
+    color: rgb(230, 0, 134);
+    width: 80%;
+    margin: auto;
+}
+
 /* 设置图片 */
+.body>a {
+    margin: 15%;
+}
+
 .body img {
-    width: 60%;
+    width: 80%;
     display: block;
     margin: auto;
-    padding: 5%;
+    background-color: aqua;
 }
 
 /* 设置特殊字符红色 */
@@ -96,11 +108,19 @@ header>span {
 .body code {
     display: block;
     width: 80%;
-    margin: 5% auto;
+    margin: auto;
+    margin-bottom: 30px;
     font-size: 1.1vw;
     overflow-x: scroll;
     overflow-y: hidden;
     border-radius: 15px;
+}
+
+/* 设置代码行号-来源于网络 */
+.hljs-ln-numbers {
+    text-align: center;
+    color: rgb(246, 255, 0);
+    border-right: 1px solid darkorange;
 }
 
 /* 时间 */
@@ -126,15 +146,16 @@ header>span {
     justify-content: space-between;
     padding-bottom: 30px;
     padding-top: 50px;
-
 }
 
-.bottom>a {
+.bottom,
+.body a {
     text-decoration: none;
     color: rgb(132, 255, 210);
 }
 
 a:hover {
+    text-decoration: underline;
     color: yellow;
 }
 
