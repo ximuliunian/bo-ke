@@ -110,7 +110,7 @@ header>span {
     width: 80%;
     margin: auto;
     margin-bottom: 30px;
-    font-size: 1.1vw;
+    font-size: 2.1vh;
     overflow-x: scroll;
     overflow-y: hidden;
     border-radius: 15px;
@@ -152,6 +152,7 @@ header>span {
 .body a {
     text-decoration: none;
     color: rgb(132, 255, 210);
+    word-break: break-all;
 }
 
 a:hover {
