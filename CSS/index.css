@@ -5,6 +5,8 @@
 }
 
 /* 响应式 开始 */
+
+/* 电脑 */
 @media screen and (min-width: 960px) {
 
     /* 背景图片 */
@@ -16,23 +18,49 @@
         min-width: 960px;
     }
 
-    /* 设置图片 */
-    .zhang-jie>a>img {
-        width: 40%;
-        display: block;
-        border-bottom-left-radius: 15px;
-        border-top-left-radius: 15px;
+    /* 让移动端的导航隐藏 */
+    #ydd {
+        display: none;
     }
 
-    /* 文字主体 */
-    .zhang-jie>span {
-        width: 60%;
-        position: absolute;
-        top: 0;
-        right: 0;
+
+    /* 左边大图 */
+    .left-img {
+        width: 55%;
+        height: 350px;
     }
+
+    /* 右边小图 */
+    .right-img {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 内容2 */
+    #body-2 {
+        height: 220px;
+    }
+
+    /* 设置内容宽高属性 */
+    #body-2>div {
+        width: 23%;
+    }
+
+    /* 内容三 */
+    #body-3>ul>li>a>img {
+        height: 200px;
+        width: 300px;
+    }
+
+    #body-3>ul>li,
+    .content {
+        height: 200px;
+    }
+
 }
 
+/* 平板 */
 @media screen and (max-width: 960px) and (min-width: 750px) {
 
     /* 背景图片 */
@@ -44,23 +72,55 @@
         min-width: 750px;
     }
 
-    /* 设置图片 */
-    .zhang-jie>a>img {
-        width: 40%;
-        display: block;
-        border-bottom-left-radius: 15px;
-        border-top-left-radius: 15px;
+    /* 让移动端的导航隐藏 */
+    #ydd {
+        display: none;
     }
 
-    /* 文字主体 */
-    .zhang-jie>span {
-        width: 60%;
+    /* 内容1 */
+    #body-1 {
+        height: 750px;
+    }
+
+    /* 大图 */
+    .left-img {
+        width: 97%;
+        height: 350px;
+    }
+
+    /* 小图 */
+    .right-img {
         position: absolute;
-        top: 0;
-        right: 0;
+        bottom: 0;
+        width: 97%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* 内容2 */
+    #body-2 {
+        flex-wrap: wrap;
+    }
+
+    #body-2>div {
+        width: 47%;
+        margin: 10px 0;
+    }
+
+    /* 内容三 */
+    #body-3>ul>li>a>img {
+        height: 200px;
+        width: 300px;
+    }
+
+    #body-3>ul>li,
+    .content {
+        height: 200px;
     }
 }
 
+
+/* 手机 */
 @media screen and (max-width: 750px) {
 
     /* 背景图片 */
@@ -72,31 +132,86 @@
         min-width: 250px;
     }
 
-    .zhang-jie>a {
-        margin: auto;
-        display: block;
-    }
 
-    .zhang-jie>a>img {
-        width: 100%;
-        display: block;
-        margin: auto;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-
-    .zhang-jie>span {
-        width: 100%;
-    }
-
-    .zhang-jie>span a {
-        font-size: 2.5vw;
-    }
-
-    .body-text-bottom {
+    /* PC端导航栏 隐藏 */
+    nav>ul {
         display: none;
     }
 
+    /* 手机端导航栏 样式 */
+    .ydd {
+        background-image: url(https://s1.ax1x.com/2022/07/16/j5Pbng.png);
+        background-size: 100%100%;
+    }
+
+    /* 设置位置 */
+    #ydd {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50px;
+    }
+
+    /* 鼠标移动到.ydd上面去事#ydd里面的内容显现 */
+    .ydd:hover #ydd {
+        background-color: aqua;
+        display: block;
+    }
+
+    /* 鼠标移动到标签上时背景/字体颜色发生改变 */
+    #ydd>li>a:hover {
+        background-color: black;
+        color: white;
+    }
+
+
+
+
+    /* 内容1 */
+    #body-1 {
+        height: 650px;
+    }
+
+    /* 大图 */
+    .left-img {
+        width: 97%;
+        height: 250px;
+    }
+
+    /* 小图 */
+    .right-img {
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 内容 2 */
+    #body-2 {
+        flex-wrap: wrap;
+    }
+
+    #body-2>div {
+        width: 47%;
+        margin: 10px 0;
+    }
+
+    /* 设置内容三的样式 */
+    #body-3>ul>li>a>img {
+        height: 150px;
+        width: 150px;
+    }
+
+    /* 设置li的大体 */
+    #body-3>ul>li,
+    .content {
+        height: 150px;
+    }
+
+    .center-text {
+        display: none;
+    }
 
 }
 
@@ -120,173 +235,334 @@ body::-webkit-scrollbar {
 }
 
 
-/* 设置头部 开始 */
+/* 导航栏 开始 */
 
-/* 外壳 */
-header {
-    /* 设置宽 */
-    width: 100%;
-    /* 设置下边框 */
-    border-bottom: 2px solid #000;
-    /* 黑色半透明背景颜色 */
-    background-color: rgba(0, 0, 0, 0.4);
-    position: relative;
-    margin-bottom: 20px;
-}
-
-/* 内壳 */
-#biao-ti {
-    text-align: center;
-}
-
-#biao-ti>span {
-    display: inline-block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-}
-
-/* 设置图像 */
-#biao-ti>span>img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-#biao-ti>span>a>img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-/* 设置导航 开始 */
+/* 导航栏主体 */
 nav {
-    width: 80%;
-    margin: 20px auto;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.523);
-    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    z-index: 100;
 }
 
-nav>ul {
-    text-align: left;
-    font-size: 1.7em;
-    padding-left: 15px;
+/* 导航栏内容主体 */
+nav>ul>li,
+nav>a>img {
+    float: left;
+    height: 50px;
+    display: block;
 }
 
-nav li {
+/* 移动端样式 开始 */
+nav>div {
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+nav>div>ul {
+    width: 100%;
+}
+
+nav>div>ul>li {
+    background-color: white;
+    border: 1px dashed #000;
+}
+
+nav>div>ul>li>a {
+    display: block;
+    padding: 10px 0;
+    font-size: 20px;
+    color: black;
+}
+
+/* 移动端样式 结束 */
+
+nav>ul>li {
+    margin-left: 1%;
+    border-left: 1px solid rgb(99, 99, 99);
+    border-right: 1px solid rgb(99, 99, 99);
+}
+
+nav>ul>li>a {
     display: inline-block;
-}
-
-nav a {
-    padding-left: 15px;
-    color: rgb(242, 255, 0);
-    text-decoration: underline;
-}
-
-
-
-nav a:hover {
-    color: rgb(96, 245, 160);
+    font-size: 20px;
     font-weight: bold;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 50px;
 }
 
-/* 设置导航 结束 */
+nav>ul>li>a:hover {
+    color: white;
+    background-color: black;
+    font-style: italic;
+}
 
-
-/* 设置头部 结束 */
+/* 导航栏 结束 */
 
 
 /* 内容 开始 */
 
-/* 设置主体 */
-.zhang-jie {
-    background-color: rgba(0, 0, 0, 0.523);
-    width: 80%;
+/* 内外边距 开始 */
+.padga {
+    margin: 10px;
+}
+
+.padg {
+    margin: 5px;
+}
+
+/* 内外边距 结束 */
+
+/* 内容-1 开始 */
+
+/* 主框架 开始 */
+#body-1 {
+    width: 90%;
     margin: auto;
     border-radius: 15px;
+    background-color: rgb(168, 255, 160);
     position: relative;
-    margin-bottom: 20px;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
+/* 主框架 结束 */
+#body-1 p,
+#body-2 p {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(153, 153, 153, 0.735);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 4px;
+}
 
-/* 设置文字主体 */
-.zhang-jie>span {
+/* 右边小图 */
+.right-img {
+    flex-wrap: wrap;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* 设置4个小图的宽高 */
+.top-left-img,
+.top-right-img,
+.bottom-left-img,
+.bottom-right-img {
+    height: 48%;
+    width: 45%;
+}
+
+/* 设置四个小图包括左大图的宽高 */
+.left-img img,
+.top-left-img img,
+.top-right-img img,
+.bottom-left-img img,
+.bottom-right-img img {
+    width: 100%;
     height: 100%;
-    color: rgb(121, 244, 115);
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.zhang-jie>span>hr {
+/* 让a标签拥有定位 */
+.top-left-img a,
+.top-right-img a,
+.bottom-left-img a,
+.bottom-right-img a,
+.left-img a {
+    position: relative;
+}
+
+
+/* 内容-1 结束 */
+
+
+/* 内容-2 开始 */
+
+/* 主体 */
+#body-2 {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 15px;
+    background-color: rgb(168, 255, 160);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 设置内容宽高属性 */
+#body-2>div {
+    height: 200px;
+}
+
+/* 让内容a标签拥有相对定位 */
+#body-2 a {
+    position: relative;
+}
+
+/* 给图片设置相应的属性 */
+#body-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 让p标签在图片里面显示  */
+#body-2 p {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+/* 内容-2 结束 */
+
+
+/* 内容-3 开始 */
+
+/* 主体 */
+#body-3 {
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.523);
+    margin-bottom: 50px;
+}
+
+.body-3 {
+    position: relative;
+    top: 50px;
+}
+
+/* 设置li的大体 */
+#body-3>ul>li {
+    display: inline-block;
     width: 95%;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #000;
+    overflow: hidden;
+    display: flex;
     margin: auto;
 }
 
-.body-text-top,
-.body-text-center,
-.body-text-bottom {
-    padding-left: 20px;
+/* 图片距离顶部10像素 */
+#body-3>ul>li>a {
+    margin-top: 10px;
 }
 
-/* 设置文字标题 */
-.body-text-top {
-    height: 20%;
-    font-size: 2.5vw;
+/* 设置图片属性 */
+#body-3 img {
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.body-text-center {
-    height: 60%;
-    font-size: 1.5vw;
+/* 设置内容 */
+.content {
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 分割上中下部分 */
+.top-text,
+.bottom-text {
+    flex-grow: 2;
+}
+
+.center-text {
+    flex-grow: 10;
+}
+
+
+.top-text {
+    display: flex;
+    align-items: center;
+}
+
+.top-text a,
+.center-text a,
+.bottom-text a {
+    color: black;
+}
+
+.center-text,
+.bottom-text {
+    border-top: 1px solid #000;
+}
+
+.bottom-text {
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.bottom-text>span {
+    margin-right: 20px;
+}
+
+
+
+.bottom-text>div>img {
+    height: 40px;
+    display: block;
+    color: #000;
+}
+
+
+/* 鼠标移动事件 */
+.top-text a:hover {
+    color: rgb(221, 255, 0);
+}
+
+.center-text a:hover {
+    color: rgb(221, 255, 0);
+}
+
+.bottom-text a:hover {
+    color: rgb(221, 255, 0);
+}
+
+/* 设置字体大小  */
+.top-text {
+    font-size: 2rem;
     /* 超出边三点 */
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-/* 底部 */
-.body-text-bottom {
-    width: 90%;
-    height: 20%;
-    margin: auto;
+.bottom-text a {
+    font-weight: bold;
 }
 
-/* 底部左部分 */
-.body-text-bottom-left {
-    float: left;
-    width: 50%;
-    position: relative;
+.center-text {
+    width: 100%;
+    font-size: 18px;
+    /* 超出边三点 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-/* 底部右部分 */
-.body-text-bottom-right {
-    float: right;
-    width: 50%;
-    position: relative;
-}
-
-/* 设置图标 */
-.body-text-bottom-left>img,
-.body-text-bottom-right>img {
-    width: 15.7%;
-    display: inline-block;
-    border-right: 2px solid rgb(255, 255, 255);
-}
-
-/* 设置底部文字 */
-.body-text-bottom-left>p,
-.body-text-bottom-right>p {
-    text-align: center;
-    font-size: 2vw;
-    position: absolute;
-    top: 10%;
-    left: 25%;
-}
-
-.zhang-jie a {
-    color: white;
-}
-
-.zhang-jie a:hover {
-    color: aqua;
-}
-
+/* 内容-3 结束 */
 
 /* 内容 结束 */
