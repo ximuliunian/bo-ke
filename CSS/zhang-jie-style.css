@@ -22,7 +22,8 @@ body {
 /* 设置头部 开始 */
 header {
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: bottom;
+    background-size: cover;
     background-attachment: local;
     height: 70vh;
     width: 100%;
