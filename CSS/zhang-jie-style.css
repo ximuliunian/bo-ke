@@ -77,6 +77,7 @@ header>span {
     color: darkorange;
     width: 80%;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 /* 设置步骤 */
@@ -85,6 +86,7 @@ header>span {
     color: rgb(230, 0, 134);
     width: 80%;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 /* 设置图片 */
@@ -96,7 +98,6 @@ header>span {
     width: 80%;
     display: block;
     margin: auto;
-    background-color: aqua;
 }
 
 /* 设置特殊字符红色 */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页栏小实例</title>
+    <!-- 页面图标 -->
+    <link rel="icon" href="../../ku/img/logo.png">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="../../CSS/zhang-jie-style.css">
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="../../gao-liang--hang-hao/felipec.min.css">
+    <script src="../../gao-liang--hang-hao/highlight.min.js"></script>
+    <script src="../../gao-liang--hang-hao/highlightjs-line-numbers.js"></script>
+    <script>hljs.initHighlightingOnLoad(); hljs.initLineNumbersOnLoad();</script>
+    <style>
+        header {
+            background-image: url(https://s1.328888.xyz/2022/07/22/mCviB.gif);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>分页栏小实例</span>
+    </header>
+    <div id="body">
+        <div class="body">
+            <p id="shi-jian">本文最后更新于：2022-7-22</p>
+
+            <h2>前言</h2>
+
+            <p>相信都见过这个</p>
+
+
+            <a href="https://s1.ax1x.com/2022/07/22/jOKRlq.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/22/jOKRlq.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>本页小实例完成之后样子</p>
+
+            <a href="https://s1.ax1x.com/2022/07/22/jOQyzn.png" target="_blank">
+                <img src="https://s1.ax1x.com/2022/07/22/jOQyzn.png" alt="找不到图片了~" title="查看图片">
+            </a>
+
+            <p>那么具体是怎么实现的,看下文</p>
+
+            <h2>话不多说上代码</h2>
+
+            <h3>HTML部分</h3>
+
+            <pre>
+<code>&lt;!-- 设置分页主体 --&gt;
+&lt;div class="fen-ye"&gt;
+    &lt;!-- 设置内容 --&gt;
+    &lt;span&gt;上一页&lt;/span&gt;
+    &lt;!-- 加 id 因为这个得单独控制 --&gt;
+    &lt;span id="ben-ye"&gt;1&lt;/span&gt;
+    &lt;a href=""&gt;1&lt;/a&gt;
+    &lt;a href=""&gt;2&lt;/a&gt;
+    &lt;a href=""&gt;3&lt;/a&gt;
+    &lt;a href=""&gt;4&lt;/a&gt;
+    &lt;a href=""&gt;...&lt;/a&gt;
+    &lt;a href=""&gt;9&lt;/a&gt;
+    &lt;!-- 加 id 因为这个得单独控制 --&gt;
+    &lt;a href="" id="xia-ye"&gt;下一页&lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+
+
+            <h3>CSS部分</h3>
+
+            <pre>
+<code> /* 分页主体 */
+ .fen-ye {
+     /* 使用弹性 */
+     display: flex;
+     /* 让内容居中 */
+     justify-content: center;
+     /* 当挤不下的时候换行 */
+     flex-wrap: wrap;
+ }
+        
+ /* 设置 .fen-ye 里面的所有 span标签和a标签 */
+ .fen-ye span,
+ a {
+     /* 让文字居中 */
+     text-align: center;
+     /* 设置文字大小为20像素 */
+     font-size: 20px;
+     /* 加 1像素 实现 黑色 边框 */
+     border: 1px solid black;
+     /* 让元素之间上下为 0 左右为 10像素 */
+     margin: 0 10px;
+ }
+        
+ /* 设置 .fen-ye 里面的所有 a标签和 id 为 ben-ye 的元素 */
+ .fen-ye a,
+ #ben-ye {
+     /* 设置宽高为 50像素 */
+     width: 50px;
+     height: 50px;
+     /* 设置行高为 50像素 目的是让文字垂直居中 */
+     line-height: 50px;
+     /* 删除所有 a标签和 id 为 ben-ye元素 的下划线*/
+     text-decoration: none;
+     /* 设置文本颜色为黑色 */
+     color: black;
+ }
+        
+ /* 当鼠标移动到该属性上时 属性会做出变化 */
+ .fen-ye a:hover {
+     /* 文本颜色变成黑色 */
+     color: black;
+     /* 背景颜色变成 blueviolet 色 */
+     background-color: blueviolet;
+ }
+        
+ /* 设置 .fen-ye 里面的所有 span标签和 id 为 xia-ye 的元素 */
+ .fen-ye span,
+ #xia-ye {
+     /* 设置宽为 100像素 */
+     width: 100px;
+     /* 设置行高为 50像素 目的是让文字垂直居中 */
+     line-height: 50px;
+ }
+        
+ /* 设置 id 为 ben-ye 的元素 目的是当前页面是第几页 */
+ #ben-ye {
+     /* 文本颜色为白色 */
+     color: white;
+     /* 背景颜色为 coral 色 */
+     background-color: coral;
+ }
+            </code></pre>
+
+
+
+            <div class="bottom">
+                <p>没有更多的内容了~</p>
+                <a href="https://www.ximuliunian.cf/fu-ye/lian-xi" id="lian-xi">联系我</a>
+                <a href="#">回到顶部</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
